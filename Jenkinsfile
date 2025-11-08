@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/pallets/flask.git'
+                git 'https://github.com/mohamedalibenchiekh/flask.git'
             }
         }
         stage('Setup Virtual Environment') {
@@ -26,7 +26,6 @@ pipeline {
 
     post {
         always {
-            // Optionally, clean up the virtual environment
             sh 'rm -rf venv'
         }
     }
